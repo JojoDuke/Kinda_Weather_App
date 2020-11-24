@@ -1,0 +1,79 @@
+$backgroundColour : linear-gradient(190deg, #77dfbc, #8b54e6);
+@import "./button";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: $backgroundColour;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.weather-container{
+    background-color: #f5e3e3;
+    border-radius: 10px;
+    height: 400px;
+    width: 300px;
+    box-shadow: 0px 0px 10px 0px #131212b2;
+    padding-top: 50px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+    h1{
+        font-size: 50px;
+        margin-bottom: 2px;
+    }
+
+    h4{
+        font-weight: 600;
+    }
+}
+
+.icon-container{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    display: block;
+    margin: 20px 75px;
+}
+
+.icon-img{    
+    animation: MoveIn 3s ease;
+}
+
+.icon-img2{    
+    animation: MoveOut 3s ease;
+}
+
+// Transition in from bottom animation
+@keyframes MoveIn{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes MoveOut{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
